@@ -19,6 +19,7 @@ class UserDTOTest {
     @Test
     public void testRequairedField() {
         UserDTO userDTO = new UserDTO();
+        System.out.println("asdasdkjn");
         Assertions.assertNull(userDTO.getId());
         Assertions.assertNull(userDTO.getName());
         Assertions.assertNull(userDTO.getB1());
