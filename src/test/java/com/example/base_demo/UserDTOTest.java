@@ -11,6 +11,7 @@ class UserDTOTest {
         UserDTO emptyUserDTO = new UserDTO();
         emptyUserDTO.setId(1);
         emptyUserDTO.setName("Test");
+        System.out.println("Test");
         Assertions.assertEquals(userDTO, emptyUserDTO);
     }
 }
