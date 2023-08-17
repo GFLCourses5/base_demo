@@ -7,11 +7,21 @@ class UserDTOTest {
 
     @Test
     public void testEquals() {
-        UserDTO userDTO = new UserDTO(1, "Test");
+        UserDTO userDTO = new UserDTO(1, "Test", false, false);
         UserDTO emptyUserDTO = new UserDTO();
         emptyUserDTO.setId(1);
         emptyUserDTO.setName("Test");
-        System.out.println("Test");
+        emptyUserDTO.setB2(false);
+        emptyUserDTO.setB1(false);
         Assertions.assertEquals(userDTO, emptyUserDTO);
+    }
+
+    @Test
+    public void testRequairedField() {
+        UserDTO userDTO = new UserDTO();
+        Assertions.assertNull(userDTO.getId());
+        Assertions.assertNull(userDTO.getName());
+        Assertions.assertNull(userDTO.getB1());
+        Assertions.assertFalse(userDTO.isB2());
     }
 }
