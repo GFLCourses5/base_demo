@@ -70,4 +70,13 @@ public class UserDTO {
         result = 31 * result + (isB2() ? 1 : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "UserDTO{" + "id=" + id +
+                ", name='" + name + '\'' +
+                ", b1=" + b1 +
+                ", b2=" + b2 +
+                '}';
+    }
 }
